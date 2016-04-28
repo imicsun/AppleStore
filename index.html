@@ -18,7 +18,7 @@
     div#wrap {
       width: 1480px;
       margin: 0 auto;
-      
+
     }
     div.pic {
       width: 360px;
@@ -253,13 +253,13 @@
       var pic = "<img src=\"http://www.apple.com/" + countryValue(country).countryCode + "retail/" + storeAbbr + "/images/" + storeAbbr + "_hero_2x.jpg\" alt=\"" + storeNumber + "\">";
 
       storeLink = "http://www.apple.com/" + countryValue(country).countryCode + "retail/" + storeAbbr + "/";
-      
+
       if (storeNumber == 658 || storeNumber == 659) {
         store = "<p>Apple Watch</p>" + "<p>at " + storeName + "</p>" + "<div class=\"flag\"><img src=\"http://images.apple.com/ac/flags/1/images/"+ countryValue(country).flag + "/32.png\">" + "<h3>R" + storeNumber + "</h3></div>";
       } else {
         store = "<p>Apple Store</p>" + "<p>" + storeName + "</p>" + "<div class=\"flag\"><img src=\"http://images.apple.com/ac/flags/1/images/"+ countryValue(country).flag + "/32.png\">" + "<h3>R" + storeNumber + "</h3></div>";
       }
-      
+
       document.getElementById(storeNumber).innerHTML = "<a href=\"" + storeLink + "\">" + pic + store + "</a>";
     };
     function futureStore(country, location, storeNumber){
@@ -1240,7 +1240,9 @@
       <script type="text/javascript">pictureSet("US", "Haywood Mall", "355");</script>
     </div>
     <div class="pic" id="356"><h1>R356</h1></div>
-    <div class="pic" id="357"><h1>R357</h1></div>
+    <div class="pic" id="357">
+      <script type="text/javascript">pictureSet("France", "Marseille", "357");</script>
+    </div>
     <div class="pic" id="358">
       <script type="text/javascript">pictureSet("Germany", "Kurfürstendamm", "358");</script>
     </div>

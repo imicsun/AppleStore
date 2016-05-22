@@ -252,11 +252,13 @@
 
       storeLink = "http://www.apple.com/" + countryValue(country).countryCode + "retail/" + storeAbbr + "/";
 
-      if (storeNumber == 658 || storeNumber == 659) {
-        store = "<p>Apple Watch</p>" + "<p>at " + storeName + "</p>" + "<div class=\"flag\"><img src=\"http://images.apple.com/ac/flags/1/images/"+ countryValue(country).flag + "/32.png\">" + "<h3>R" + storeNumber + "</h3></div>";
-      } else {
-        store = "<p>Apple Store</p>" + "<p>" + storeName + "</p>" + "<div class=\"flag\"><img src=\"http://images.apple.com/ac/flags/1/images/"+ countryValue(country).flag + "/32.png\">" + "<h3>R" + storeNumber + "</h3></div>";
-      }
+      if (storeNumber == "658" || storeNumber == "659") {
+				store = "<p>Apple Watch</p>" + "<p>at " + storeName + "</p>" + "<div class=\"flag\"><img src=\"http://images.apple.com/ac/flags/1/images/"+ countryValue(country).flag + "/32.png\">" + "<h3>R" + storeNumber + "</h3></div>";
+			} else if (storeNumber == "075") {
+				store = "<p>Apple</p>" + "<p>" + storeName + "</p>" + "<div class=\"flag\"><img src=\"http://images.apple.com/ac/flags/1/images/"+ countryValue(country).flag + "/32.png\">" + "<h3>R" + storeNumber + "</h3></div>";
+			} else {
+				store = "<p>Apple Store</p>" + "<p>" + storeName + "</p>" + "<div class=\"flag\"><img src=\"http://images.apple.com/ac/flags/1/images/"+ countryValue(country).flag + "/32.png\">" + "<h3>R" + storeNumber + "</h3></div>";
+			}
 
       document.getElementById(storeNumber).innerHTML = "<a href=\"" + storeLink + "\">" + pic + store + "</a>";
     };
@@ -491,7 +493,7 @@
       <script type="text/javascript">pictureSet("US", "Boca Raton", "074");</script>
     </div>
     <div class="pic" id="075">
-      <script type="text/javascript">pictureSet("US", "San Francisco", "075");</script>
+      <script type="text/javascript">pictureSet("US", "Union Square", "075");</script>
     </div>
     <div class="pic" id="076">
       <script type="text/javascript">pictureSet("US", "Chestnut Hill", "076");</script>
@@ -1871,7 +1873,9 @@
       <script type="text/javascript">pictureSet("China", "Thaihot Plaza", "646");</script>
     </div>
     <div class="pic" id="647"><h1>R647</h1></div>
-    <div class="pic" id="648"><h1>R648</h1></div>
+    <div class="pic" id="648">
+			<script type="text/javascript">pictureSet("China", "Parc 66 Jinan", "648");</script>
+		</div>
     <div class="pic" id="649"><h1>R649</h1></div>
     <div class="pic" id="650">
       <script type="text/javascript">pictureSet("US", "Summerlin", "650");</script>

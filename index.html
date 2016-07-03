@@ -107,9 +107,11 @@
       margin: 0;
     }
     .future > h2 > img {
-      width: 28px;
-      height: 28px;
-      display: inline;
+      width: 30px;
+			height: 30px;
+			display: inline;
+			position: relative;;
+			top: 4px;
     }
     .closed > h1 {
       height: 120px;
@@ -156,92 +158,101 @@
       var flag = "";
       switch(country)
       {
-      case "China":
-        countryCode="cn/";
-        flag = "cn";
-        break;
-      case "Australia":
-        countryCode="au/";
-        flag = "au";
-        break;
-      case "Brazil":
-        countryCode="br/";
-        flag = "br";
-        break;
-      case "Canada":
-        countryCode="ca/";
-        flag = "ca";
-        break;
-      case "France":
-        countryCode="fr/";
-        flag = "fr";
-        break;
-      case "Germany":
-        countryCode="de/";
-        flag = "de";
-        break;
-      case "Hong Kong":
-        countryCode="hk/";
-        flag = "hk";
-        break;
-      case "Italy":
-        countryCode="it/";
-        flag = "it";
-        break;
-      case "Japan":
-        countryCode="jp/";
-        flag = "jp";
-        break;
-      case "Netherlands":
-        countryCode="nl/";
-        flag = "nl";
-        break;
-      case "Spain":
-        countryCode="es/";
-        flag = "es";
-        break;
-      case "Sweden":
-        countryCode="se/";
-        flag = "se";
-        break;
-      case "Switzerland":
-        countryCode="chde/";
-        flag = "ch";
-        break;
-      case "Turkey":
-        countryCode="tr/";
-        flag = "tr";
-        break;
-      case "UK":
-        countryCode="uk/";
-        flag = "gb";
-        break;
-      case "Belgium":
-        countryCode="befr/";
-        flag = "be";
-        break;
-      case "UAE":
-        countryCode="ae/";
-        flag = "ae";
-        break;
-      case "Macau":
-        countryCode="mo/";
-        flag = "mo";
-        break;
-      case "Mexico":
-        countryCode="mx/";
-        flag = "mx";
-        break;
-      case "Singapore":
-        countryCode="sg/";
-        flag = "sg";
-        break;
-      default:
-        flag = "us";
-        break;
+        case "China":
+  				countryCode="cn/";
+  				flag = "china";
+  				break;
+  			case "Australia":
+  				countryCode="au/";
+  				flag = "australia";
+  				break;
+  			case "Brazil":
+  				countryCode="br/";
+  				flag = "brazil";
+  				break;
+  			case "Canada":
+  				countryCode="ca/";
+  				flag = "canada";
+  				break;
+  			case "France":
+  				countryCode="fr/";
+  				flag = "france";
+  				break;
+  			case "Germany":
+  				countryCode="de/";
+  				flag = "germany";
+  				break;
+  			case "Hong Kong":
+  				countryCode="hk/";
+  				flag = "hong_kong";
+  				break;
+  			case "Italy":
+  				countryCode="it/";
+  				flag = "italy";
+  				break;
+  			case "Japan":
+  				countryCode="jp/";
+  				flag = "japan";
+  				break;
+  			case "Netherlands":
+  				countryCode="nl/";
+  				flag = "netherlands";
+  				break;
+  			case "Spain":
+  				countryCode="es/";
+  				flag = "spain";
+  				break;
+  			case "Sweden":
+  				countryCode="se/";
+  				flag = "sweden";
+  				break;
+  			case "Switzerland":
+  				countryCode="chde/";
+  				flag = "switzerland";
+  				break;
+  			case "Turkey":
+  				countryCode="tr/";
+  				flag = "turkey";
+  				break;
+  			case "UK":
+  				countryCode="uk/";
+  				flag = "united_kingdom";
+  				break;
+  			case "Belgium":
+  				countryCode="befr/";
+  				flag = "belgium";
+  				break;
+  			case "UAE":
+  				countryCode="ae/";
+  				flag = "united_arab_emirates";
+  				break;
+  			case "Macau":
+  				countryCode="mo/";
+  				flag = "macau";
+  				break;
+  			case "Mexico":
+  				countryCode="mx/";
+  				flag = "mexico";
+  				break;
+  			case "Singapore":
+  				countryCode="sg/";
+  				flag = "singapore";
+  				break;
+  			case "Taiwan":
+  				countryCode="tw/";
+  				flag = "taiwan";
+  				break;
+  			case "Korea":
+  				countryCode="kr/";
+  				flag = "south_korea";
+  				break;
+  			default:
+  				flag = "usa";
+  				break;
       }
       return {countryCode:countryCode, flag:flag};
     }
+
     function pictureSet(country, storeName, storeNumber){
       var store = "";
       var storeLink = "";
@@ -252,18 +263,21 @@
 
       storeLink = "http://www.apple.com/" + countryValue(country).countryCode + "retail/" + storeAbbr + "/";
 
+      var flagIconLink = "http://images.apple.com/global/elements/flags/30x30/" + countryValue(country).flag + "_2x.png";
+
       if (storeNumber == "658" || storeNumber == "659") {
-				store = "<p>Apple Watch</p>" + "<p>at " + storeName + "</p>" + "<div class=\"flag\"><img src=\"http://images.apple.com/ac/flags/1/images/"+ countryValue(country).flag + "/32.png\">" + "<h3>R" + storeNumber + "</h3></div>";
+				store = "<p>Apple Watch</p>" + "<p>at " + storeName + "</p>" + "<div class=\"flag\"><img src=\"" + flagIconLink + "\">" + "<h3>R" + storeNumber + "</h3></div>";
 			} else if (storeNumber == "075") {
-				store = "<p>Apple</p>" + "<p>" + storeName + "</p>" + "<div class=\"flag\"><img src=\"http://images.apple.com/ac/flags/1/images/"+ countryValue(country).flag + "/32.png\">" + "<h3>R" + storeNumber + "</h3></div>";
+				store = "<p>Apple</p>" + "<p>" + storeName + "</p>" + "<div class=\"flag\"><img src=\"" + flagIconLink + "\">" + "<h3>R" + storeNumber + "</h3></div>";
 			} else {
-				store = "<p>Apple Store</p>" + "<p>" + storeName + "</p>" + "<div class=\"flag\"><img src=\"http://images.apple.com/ac/flags/1/images/"+ countryValue(country).flag + "/32.png\">" + "<h3>R" + storeNumber + "</h3></div>";
+				store = "<p>Apple Store</p>" + "<p>" + storeName + "</p>" + "<div class=\"flag\"><img src=\"" + flagIconLink + "\">" + "<h3>R" + storeNumber + "</h3></div>";
 			}
 
       document.getElementById(storeNumber).innerHTML = "<a href=\"" + storeLink + "\">" + pic + store + "</a>";
     };
     function futureStore(country, location, storeNumber){
-      store = "<h1>R" + storeNumber + "</h1><h2><img src=\"http://images.apple.com/ac/flags/1/images/"+ countryValue(country).flag + "/32.png\"> " + location + "</h2>";
+      var flagIconLink = "http://images.apple.com/global/elements/flags/30x30/" + countryValue(country).flag + "_2x.png";
+      store = "<h1>R" + storeNumber + "</h1><h2><img src=\"" + flagIconLink + "\"> " + location + "</h2>";
 
       document.getElementById(storeNumber).innerHTML = store;
     }

@@ -263,7 +263,6 @@
 			var storeAbbr = normalLetter(storeName.replace(/\s+/g, '').toLowerCase(), country);
 
 			var pic = "<img src=\"http://www.apple.com/" + countryValue(country).countryCode + "retail/" + storeAbbr + "/images/" + storeAbbr + "_hero_2x.jpg\" alt=\"" + storeNumber + "\">";
-			// var pic = "<img src=\"http://rtlimages.apple.com/cmc/dieter/store/4_3/R" + storeNumber + ".png\" alt=\"" + storeNumber + "\">";
 
 			storeLink = "http://www.apple.com/" + countryValue(country).countryCode + "retail/" + storeAbbr + "/";
 
@@ -276,13 +275,6 @@
 			} else {
 				store = "<p>Apple Store</p>" + "<p>" + storeName + "</p>" + "<div class=\"flag\"><img src=\"" + flagIconLink + "\">" + "<h3>R" + storeNumber + "</h3></div>";
 			}
-			// if (storeNumber == "658" || storeNumber == "659") {
-			// 	store = "<p>Apple Watch</p>" + "<p>at " + storeName + "</p>" + "<div class=\"flag\"><img src=\"http://images.apple.com/ac/flags/1/images/"+ countryValue(country).flag + "/32.png\">" + "<h3>R" + storeNumber + "</h3></div>";
-			// } else if (storeNumber == "075") {
-			// 	store = "<p>Apple</p>" + "<p>" + storeName + "</p>" + "<div class=\"flag\"><img src=\"http://images.apple.com/ac/flags/1/images/"+ countryValue(country).flag + "/32.png\">" + "<h3>R" + storeNumber + "</h3></div>";
-			// } else {
-			// 	store = "<p>Apple Store</p>" + "<p>" + storeName + "</p>" + "<div class=\"flag\"><img src=\"http://images.apple.com/ac/flags/1/images/"+ countryValue(country).flag + "/32.png\">" + "<h3>R" + storeNumber + "</h3></div>";
-			// }
 
 			document.getElementById(storeNumber).innerHTML = "<a href=\"" + storeLink + "\">" + pic + store + "</a>";
 		};

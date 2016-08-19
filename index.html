@@ -269,9 +269,9 @@
 			var flagIconLink = "http://images.apple.com/global/elements/flags/30x30/" + countryValue(country).flag + "_2x.png";
 
 			if (storeNumber == "658" || storeNumber == "659") {
-				store = "<p>Apple Watch</p>" + "<p>at " + storeName + "</p>" + "<div class=\"flag\"><img src=\"" + flagIconLink + "\">" + "<h3>R" + storeNumber + "</h3></div>";
+				store = "<p><b>Apple Watch</b> at " + storeName + "</p>" + "<div class=\"flag\"><img src=\"" + flagIconLink + "\">" + "<h3>R" + storeNumber + "</h3></div>";
 			} else {
-				store = "<p>Apple</p>" + "<p>" + storeName + "</p>" + "<div class=\"flag\"><img src=\"" + flagIconLink + "\">" + "<h3>R" + storeNumber + "</h3></div>";
+				store = "<p><b>Apple</b> " + storeName + "</p>" + "<div class=\"flag\"><img src=\"" + flagIconLink + "\">" + "<h3>R" + storeNumber + "</h3></div>";
 			}
 
 			document.getElementById(storeNumber).innerHTML = "<a href=\"" + storeLink + "\">" + pic + store + "</a>";
